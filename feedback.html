@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: url('image.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.5); /* lighter and more readable */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            color: #000;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        textarea, select {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 10px;
+            resize: none;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.7);
+            color: #000;
+            backdrop-filter: blur(6px);
+        }
+
+        textarea::placeholder {
+            color: #444;
+        }
+
+        select option {
+            background: #fff;
+            color: #000;
+        }
+
+        .btn {
+            background: #4caf50;
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #43a047;
+        }
+
+        #feedbackForm {
+            text-align: left; /* Align form elements to the left for better readability */
+        }
+
+        #feedbackForm label {
+            display: block;
+            margin-bottom: 5px;
+            color: #000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>We'd love your feedback!</h2>
+        <form id="feedbackForm" action="mailto:s.shamaswin2414@gmail.com?subject=New Feedback Received" method="post" enctype="text/plain">
+            <label for="feedbackText">Your thoughts:</label>
+            <textarea id="feedbackText" name="feedback" placeholder="Write your thoughts here..." rows="6"></textarea>
+            <br>
+            <label for="rating">Rate your experience:</label>
+            <select id="rating" name="rating">
+                <option value="5">🌟🌟🌟🌟🌟 - Excellent</option>
+                <option value="4">🌟🌟🌟🌟 - Good</option>
+                <option value="3">🌟🌟🌟 - Average</option>
+                <option value="2">🌟🌟 - Poor</option>
+                <option value="1">🌟 - Terrible</option>
+            </select>
+            <br>
+            <button class="btn" type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>

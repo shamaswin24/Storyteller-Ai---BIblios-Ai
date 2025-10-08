@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Biblios AI</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Biblios AI <i class="fas fa-magic magic-icon"></i></h1>
+
+        <div class="input-controls">
+            <textarea id="userInput" class="input-area" placeholder="Enter a story idea..."></textarea>
+            <div class="char-count" id="charCount">0/200</div>
+            <textarea id="keywordsInput" class="input-area optional" placeholder="Include these keywords... (optional)"></textarea>
+        </div>
+
+        <div class="history-container">
+            <label for="historySelect">Previous Ideas:</label>
+            <select id="historySelect" class="btn">
+                <option value="" selected disabled>-- Select Previous Idea --</option>
+            </select>
+        </div>
+
+        <div class="options-container">
+            <div class="model-selector">
+                <label for="modelSelect">AI Model:</label>
+                <select id="modelSelect" class="btn">
+                    <option value="mistral" selected>Mistral (High)</option>
+                    <option value="llama2">Llama 2 (Middle)</option>
+                    <option value="orca-mini">Orca Mini (Low)</option>
+                </select>
+            </div>
+            <div class="style-selector">
+                <label for="styleSelect">Story Tone:</label>
+                <select id="styleSelect" class="btn">
+                    <option value="default" selected>Default</option>
+                    <option value="funny">Funny</option>
+                    <option value="scary">Scary</option>
+                    <option value="adventurous">Adventurous</option>
+                    <option value="fantasy">Fantasy</option>
+                </select>
+            </div>
+            <div class="length-selector">
+                <label for="lengthSelect">Story Length:</label>
+                <select id="lengthSelect" class="btn">
+                    <option value="short" selected>Short</option>
+                    <option value="medium">Medium</option>
+                    <option value="long">Long</option>
+                </select>
+            </div>
+            <div class="genre-selector">
+                <label for="genreSelect">Genre:</label>
+                <select id="genreSelect" class="btn">
+                    <option value="any" selected>Any</option>
+                    <option value="sci-fi">Science Fiction</option>
+                    <option value="mystery">Mystery</option>
+                    <option value="romance">Romance</option>
+                    <option value="historical">Historical Fiction</option>
+                    <option value="thriller">Thriller</option>
+                    <option value="horror">Horror</option>
+                    <option value="children">Children's</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button id="generateButton" class="btn generate-btn"><i class="fas fa-feather-alt"></i> Generate Story</button>
+            <button id="regenerateButton" class="btn regenerate-btn hidden"><i class="fas fa-redo"></i> Regenerate</button>
+            <button id="clearButton" class="btn clear-btn"><i class="fas fa-trash-alt"></i> Clear</button>
+            <button id="saveButton" class="btn save-btn"><i class="fas fa-save"></i> Save Story</button>
+            <button id="copyButton" class="btn copy-btn"><i class="fas fa-clipboard"></i> Copy</button>
+            <button id="themeButton" class="btn theme-btn"><i class="fas fa-sun"></i> Light Mode</button>
+            <button class="btn feedback-btn" onclick="window.location.href='feedback.html'"><i class="fas fa-comment-dots"></i> Feedback</button>
+            <button id="speakButton" class="btn speak-btn"><i class="fas fa-volume-up"></i> Speak</button>
+            <button id="stopSpeakButton" class="btn stop-speak-btn hidden"><i class="fas fa-stop"></i> Stop Speak</button>
+        </div>
+
+        <div id="storyOutput" class="story-output">
+            <div id="loading" class="loading hidden">
+                <i class="fas fa-spinner fa-spin"></i> Generating with <span id="loadingModel"></span>...
+            </div>
+            <div id="generatedStory" class="generated-story">
+                <span id="storyText"></span><span class="cursor"></span>
+                <div id="errorMessage" class="error-message hidden"></div>
+            </div>
+        </div>
+
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

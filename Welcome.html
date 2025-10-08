@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome to Biblios AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Neue', cursive;
+      background: linear-gradient(180deg, #fdf6e3, #ffe8e8);
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      padding: 50px 20px 30px;
+      background: url('https://cdn.pixabay.com/photo/2021/03/24/21/11/writer-6120599_1280.png') no-repeat center top;
+      background-size: 300px;
+      background-position: top center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-top: 200px;
+      color: #d63384;
+    }
+
+    p.tagline {
+      font-size: 1.3rem;
+      margin: 10px auto 30px;
+      max-width: 600px;
+    }
+
+    .facts {
+      background: #fff5f5;
+      padding: 40px 20px;
+      border-top: 5px dashed #ff99c8;
+    }
+
+    .fact {
+      margin: 20px auto;
+      font-size: 1.1rem;
+      max-width: 700px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      text-align: left;
+      background: #fff;
+      border-radius: 15px;
+      padding: 15px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .fact img {
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      background-color: #ff69b4;
+      border: none;
+      border-radius: 12px;
+      color: #fff;
+      cursor: pointer;
+      margin: 30px auto;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #ff1493;
+    }
+
+    @media (max-width: 600px) {
+      .fact {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>Welcome to Biblios AI</h1>
+    <p class="tagline">Let AI bring your wildest stories to life — from fairy tales to space adventures!</p>
+    <button class="btn" onclick="location.href='index.html'">Start Storytelling</button>
+  </div>
+
+  <div class="facts">
+    <div class="fact">
+      <img src="https://cdn-icons-png.flaticon.com/512/3501/3501615.png" alt="Fact 1">
+      <p><strong>Did you know?</strong> The oldest written story is the Epic of Gilgamesh, over 4,000 years old!</p>
+    </div>
+
+    <div class="fact">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Fact 2">
+      <p><strong>Fun fact:</strong> Your brain loves stories! It processes them 22x faster than facts alone.</p>
+    </div>
+
+    <div class="fact">
+      <img src="https://cdn-icons-png.flaticon.com/512/4128/4128176.png" alt="Fact 3">
+      <p><strong>Cartoon magic:</strong> Storytelling through illustrations increases memory and engagement by 65%!</p>
+    </div>
+  </div>
+</body>
+</html>
